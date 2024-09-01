@@ -44,7 +44,8 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
-*.csv
+.conda
+.github
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -177,3 +178,6 @@ cython_debug/
 #.idea/
 
 # End of https://www.toptal.com/developers/gitignore/api/python,jupyternotebooks
+data/raw/microdados_matriculas_2019.csv
+data/raw/microdados_matriculas_2020.csv
+data/raw/microdados_matriculas_2021.csv

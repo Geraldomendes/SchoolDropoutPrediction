@@ -1,89 +1,89 @@
-# <Título do projeto>
 
-Insira aqui um resumo do projeto que será construído. Tente apresentar uma justificativa para o projeto. É desejável que também se insira um [graphical abstract](https://www.elsevier.com/authors/tools-and-resources/visual-abstract).
+# <Previsão de evasão estudantil>
 
 ## Desenvolvedores
- - [Nome do desenvolvedor #1](url-do-github-do-desenvolvedor-#1)
- - [Nome do desenvolvedor #2](url-do-github-do-desenvolvedor-#2)
- - [Nome do desenvolvedor #3](url-do-github-do-desenvolvedor-#3)
- - [Nome do desenvolvedor #4](url-do-github-do-desenvolvedor-#4)
- - ...
+ - [Geraldo Mendes](https://github.com/Geraldomendes)
 
 ---
 
-> **Nota**: todo o texto abaixo é somente para entendimento do usuário do template. Por favor remova-o quando for atualizar este `README.md`.
+## Descrição do projeto
+Dados os obstáculos enfrentados pelo sistema educacional, a evasão escolar
+desempenha um papel crucial, afetando estudantes de diferentes contextos
+socioeconômicos. Com base nisso, este trabalho propõe **construir um modelo
+preditivo baseado em técnicas de Ciência de Dados para prever a taxa de evasão no
+ensino médio e técnico brasileiro**. O estudo aborda a complexidade deste fenômeno,
+destacando a sua natureza social e a necessidade de soluções proativas. A
+abordagem utiliza dados do censo escolar da educação básica e inclui a análise
+exploratória de dados e técnicas de aprendizado de máquina. O modelo proposto visa
+prever a evasão escolar, permitindo uma intervenção personalizada e prestando
+apoio específico aos alunos desfavorecidos. Além de contribuir para a compreensão
+dos fatores associados à evasão escolar, os resultados pretendem oferecer uma
+abordagem inovadora para a prevenção desse fenômeno, indo além do meio
+acadêmico de modo a proporcionar contribuições práticas ao campo educacional.
 
-## Funcionalidades
+--- 
 
-Esse template foi inicialmente baseado no [template de ciência de dados do cookiecutter](https://drivendata.github.io/cookiecutter-data-science/), mas ao longo do tempo várias modificações foram sendo realizadas. Atualmente o template tem as seguintes características:
- - Utilização do arquivo `pyproject.toml` como centralizador de dependências;
- - Configuração para criação de aplicação `streamlit`;
- - Utilização de [jupyter notebooks](https://jupyter.org/) para arquivos de análise;
- - Documentação com o [mkdocs](https://www.mkdocs.org/) ([material design](https://squidfunk.github.io/mkdocs-material/) theme)
+## Estratégia de Solução
 
-## Instruções
+**1. Data cleaning:** - Realizar uma limpeza dos dados para remover valores duplicados, inconsistentes, ausentes e remover atributos sem valor significativo para o trabalho.
 
-### Requisitos
+**2. Análise exploratória:** - Realizar uma análise exploratória para obter insights e entender os fatores causadores da evasão.
 
-Para utilizar este template, você precisará de um ambiente com os seguintes softwares:
- - git
- - Python 3.8
- - Poetry `1.1.13` ou superior
+**3. Engenharia de atributos**: Aplicar engenharia de atributos baseado nas variáveis originais para melhor descrever o fenônemo que será modelado.
 
-É aconselhável o uso do `pyenv` para o gerenciamento de versões do Python.
+**4. Data preparation**: - Preparar os dados com métodos de normalização/padronização, além de codificar variáveis categóricas para melhorar os resultados.
 
-### Iniciando um novo projeto
+**5. Machine Learning and Fine Tuning**: Treinar os algoritmos de machine learning e realizar um ajuste de parâmetros para obter um modelo com maior precisão.
 
-Para iniciar um novo projeto você precisa ter instalado na sua máquina as aplicações citadas na seção anterior, depois disso basta:
+**6. Avaliar os resultados de acordo com o problema que está sendo modelado**: Avaliar os resultados dos modelos com base no problema da evasão estudantil .
 
-1. clicar no botão **Use this template** (ou "Usar este modelo").
-2. Digitar um nome para seu repositório e uma descrição opcional.
-3. Escolher a visibilidade do projeto (Publica ou privada).
-4. Clicar em **Create repository from template** (Criar repositório a partir do modelo).
+---
 
-Pronto, acaba de criar um repositório a partir deste modelo. Para mais informações sobre o uso de templates, acesse a [documentação oficial](https://docs.github.com/pt/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+## Performance dos modelos
 
+### Modelo para os cursos técnicos - Decision Tree
 
-### Contribuindo com um repositório já criado
+Para os cursos técnicos, foram utilizados os algoritmos: Logistic Regression (Regressão Logística), K-Nearest Neighbors e Decision Tree. 
 
-Depois de criar o repositório, para começar a modificá-lo e/ou contribuir com repositórios já criados,  você precisa cloná-lo. Para isso, siga os seguintes passos:
+As estatísticas dos modelos após a validação cruzada e ajuste de parâmetros encontram-se na Tabela abaixo:
 
-1. Acima da lista de arquivos, clique no botão **Code** (em verde).
-2. Copie a URL para o repositório.
-    - Tente clonar utilizando uma chave **SSH**. Para isso, clique na aba **SSH** e em seguida clique no ícone de cópia.
-3. Abra o terminal.
-4. Altere o diretório de trabalho atual para o local que deseja ter o diretório clonado.
-5. Digite `git clone` e cole a URL que você copiou anteriormente:
+| **Modelo**          | **Accuracy** | **F1**       | **Precision** | **Recall**    |
+|---------------------|--------------|--------------|---------------|---------------|
+| Decision Tree       | 0.86 +- 0.03 | 0.76 +- 0.07 | 0.88 +- 0.12  | 0..69 +- 0.15 |
+| KNN                 | 0.71 +- 0.06 | 0.48 +- 0.07 | 0.59 +- 0.15  | 0.42 +- 0.06  |
+| Logistic Regression | 0.84 +- 0.02 | 0.70 +- 0.09 | 0.87 +- 0.08  | 0.62 +- 0.17  |
 
-```
-git clone git@github.com:NOME-DE-USUARIO/REPOSITORIO.git
-```
-6. Pressione **Enter** para criar seu clone local.
+O melhor modelo (Decision Tree) foi escolhido com base nas métricas de Precision e Recall, uma vez que:
 
-Proto, com isso você acaba de clonar um repositório. Para mais informações sobre a clonagem de arquivos, acesse a [documentação oficial](https://docs.github.com/pt/repositories/creating-and-managing-repositories/cloning-a-repository).
+> **Recall:**
+-  No problema da evasão estudantil, o foco principal é identificar todos os alunos em risco, que significa maximizar o recall, uma vez que essa métrica nos dá a probabilidade de uma classe positiva ser corretamente classificada. O recall do modelo no conjunto de teste foi de 69%, foi o maior que conseguimos comparado aos outros, onde 69% dos evadidos foram corretamente identificados.
 
-Com o repositório clonado, você precisa navegar até a pasta local, usando o comando :
+> **Precisão:**
+- Essa também é uma métrica importante se quisermos priorizar alarmes falsos, que seriam os casos de falsos positivos - quando o aluno não é evadido, mas o modelo classifica como tal. O modelo apresentou uma precisão de 88%, ou seja, de todos os alunos que ele classificou como evadido, ele esteve correto em 88% das vezes. Isso garante que esforços de intervenção não sejam desperdiçados em alunos que não estejam em risco.
 
-```
-cd REPOSITORIO
-```
+### Modelo para o nível médio - Random Forest
 
-Estando na pasta do repositório, basta instalar as dependências do projeto utilizando o comando:
+Para o nível médio, foram utilizados os algoritmos: Logistic Regression (Regressão Logística), K-Nearest Neighbors e Random Forest. 
 
-```
-poetry install
-```
+As estatísticas dos modelos após a validação cruzada e ajuste de parâmetros encontram-se na Tabela abaixo:
+| **Modelo**          | **Accuracy** | **Precision** | **Recall**   |
+|---------------------|--------------|---------------|--------------|
+| KNN                 | 0.87 +- 0.02 | 0.71 +- 0.06  | 0.74 +- 0.03 |
+| Random Forest       | 0.97 +- 0.00 | 0.95 +- 0.00  | 0.89 +- 0.01 |
+| Logistic Regression | 0.87 +- 0.02 | 0.68 +- 0.03  | 0.80 +- 0.02 |
 
-Ele irá instalar todas as dependências contidas no arquivo `pyproject.toml`. Depois disso basta ativar o ambiente virtual criado pelo Poetry utilizando o comando:
+O melhor modelo (Random Forest) foi escolhido com base nas métricas de Precision e Recall, uma vez que:
 
-```
-poetry shell
-```
+> **Recall:**
+-  No problema da evasão estudantil, o foco principal é identificar todos os alunos em risco, que significa maximizar o recall, uma vez que essa métrica nos dá a probabilidade de uma classe positiva ser corretamente classificada. O recall do modelo no conjunto de teste foi de 89%, garantindo que poucos alunos evadidos fossem deixados de fora, isto é,89% dos evadidos foram corretamente classificados pelo modelo.
 
-Para mais informações sobre os comandos do Poetry, visite a [documentação oficial](https://python-poetry.org/docs/).
+> **Precisão:**
+- Essa também é uma métrica importante se quisermos priorizar alarmes falsos, que seriam os casos de falsos positivos - quando o aluno não é evadido, mas o modelo classifica como tal. O modelo apresentou uma precisão de 95%, ou seja, de todos os alunos que ele classificou como evadido, ele esteve correto em 95% das vezes. Isso garante que esforços de intervenção não sejam desperdiçados em alunos que não estejam em risco.
 
-Para contribuir com um projeto, tente utilizar uma metodologia adequada. Utilize [este artigo](https://omadson.github.io/site/blog/2022/software-development-workflow/) para obter mais informações.
+---
+## Conclusões
 
+... 
 
 ### Organização de diretórios
 
@@ -92,22 +92,12 @@ Para contribuir com um projeto, tente utilizar uma metodologia adequada. Utilize
 .
 ├── data/              # Diretório contendo todos os arquivos de dados
 │   ├── external/      # Arquivos de dados de fontes externas
-│   ├── interim/       # Arquivos de dados intermediários
 │   ├── processed/     # Arquivos de dados processados
 │   └── raw/           # Arquivos de dados originais, imutáveis
-├── docs/              # Documentação gerada através da biblioteca mkdocs
 ├── models/            # Modelos treinados e serializados, predições ou resumos de modelos
 ├── notebooks/         # Diretório contendo todos os notebooks utilizados nos passos
-├── references/        # Dicionários de dados, manuais e todo o material exploratório
-├── src/               # Código fonte utilizado nesse projeto
-│   ├── data/          # Classes e funções utilizadas para download e processamento de dados
-│   ├── deployment/    # Classes e funções utilizadas para implantação do modelo
-│   └── model/         # Classes e funções utilizadas para modelagem
-├── app.py             # Arquivo com o código da aplicação do streamlit
-├── Procfile           # Arquivo de configuração do heroku
-├── pyproject.toml     # Arquivo de dependências para reprodução do projeto
-├── poetry.lock        # Arquivo com sub-dependências do projeto principal
-├── README.md          # Informações gerais do projeto
-└── tasks.py           # Arquivo com funções para criação de tarefas utilizadas pelo invoke
+└── README.md          # Informações gerais do projeto
 
 ```
+
+
