@@ -1,13 +1,10 @@
 
 # <Previsão de evasão estudantil>
 
-## Desenvolvedores
- - [Geraldo Mendes](https://github.com/Geraldomendes)
-
 ---
 
 ## Descrição do projeto
-Dados os obstáculos enfrentados pelo sistema educacional, a evasão escolar
+Dados os obstáculos enfrentados pelo sistema educacional, a evasão escolar 
 desempenha um papel crucial, afetando estudantes de diferentes contextos
 socioeconômicos. Com base nisso, este trabalho propõe **construir um modelo
 preditivo baseado em técnicas de Ciência de Dados para prever a taxa de evasão no
@@ -47,11 +44,11 @@ Para os cursos técnicos, foram utilizados os algoritmos: Logistic Regression (R
 
 As estatísticas dos modelos após a validação cruzada e ajuste de parâmetros encontram-se na Tabela abaixo:
 
-| **Modelo**          | **Accuracy** | **F1**       | **Precision** | **Recall**    |
+| **Modelo**          | **Accuracy** | **F1-Score** | **Precision** | **Recall**    |
 |---------------------|--------------|--------------|---------------|---------------|
-| Decision Tree       | 0.86 +- 0.03 | 0.76 +- 0.07 | 0.88 +- 0.12  | 0..69 +- 0.15 |
-| KNN                 | 0.71 +- 0.06 | 0.48 +- 0.07 | 0.59 +- 0.15  | 0.42 +- 0.06  |
-| Logistic Regression | 0.84 +- 0.02 | 0.70 +- 0.09 | 0.87 +- 0.08  | 0.62 +- 0.17  |
+| Decision Tree       | 0.86 ± 0.03  | 0.76 ± 0.07  | 0.88 ± 0.12   | 0.69 ± 0.15   |
+| KNN                 | 0.71 ± 0.06  | 0.48 ± 0.07  | 0.59 ± 0.15   | 0.42 ± 0.06   |
+| Logistic Regression | 0.84 ± 0.02  | 0.70 ± 0.09  | 0.87 ± 0.08   | 0.62 ± 0.17   |
 
 O melhor modelo (Decision Tree) foi escolhido com base nas métricas de Precision e Recall, uma vez que:
 
@@ -66,11 +63,11 @@ O melhor modelo (Decision Tree) foi escolhido com base nas métricas de Precisio
 Para o nível médio, foram utilizados os algoritmos: Logistic Regression (Regressão Logística), K-Nearest Neighbors e Random Forest. 
 
 As estatísticas dos modelos após a validação cruzada e ajuste de parâmetros encontram-se na Tabela abaixo:
-| **Modelo**          | **Accuracy** | **Precision** | **Recall**   |
-|---------------------|--------------|---------------|--------------|
-| KNN                 | 0.87 +- 0.02 | 0.71 +- 0.06  | 0.74 +- 0.03 |
-| Random Forest       | 0.97 +- 0.00 | 0.95 +- 0.00  | 0.89 +- 0.01 |
-| Logistic Regression | 0.87 +- 0.02 | 0.68 +- 0.03  | 0.80 +- 0.02 |
+| **Modelo**          | **Accuracy** | **F1-Score** | **Precision** | **Recall**   |
+|---------------------|--------------|--------------|---------------|--------------|
+| KNN                 | 0.87 ± 0.02  | 0.72 ± 0.03  | 0.71 ± 0.06   | 0.74 ± 0.03  |
+| Random Forest       | 0.97 ± 0.00  | 0.92 ± 0.00  | 0.95 ± 0.00   | 0.89 ± 0.01  |
+| Logistic Regression | 0.87 ± 0.02  | 0.73 ± 0.03  | 0.68 ± 0.03   | 0.80 ± 0.02  |
 
 O melhor modelo (Random Forest) foi escolhido com base nas métricas de Precision e Recall, uma vez que:
 
@@ -81,9 +78,10 @@ O melhor modelo (Random Forest) foi escolhido com base nas métricas de Precisio
 - Essa também é uma métrica importante se quisermos priorizar alarmes falsos, que seriam os casos de falsos positivos - quando o aluno não é evadido, mas o modelo classifica como tal. O modelo apresentou uma precisão de 95%, ou seja, de todos os alunos que ele classificou como evadido, ele esteve correto em 95% das vezes. Isso garante que esforços de intervenção não sejam desperdiçados em alunos que não estejam em risco.
 
 ---
-## Conclusões
+## Desenvolvedor
+ - [Geraldo Mendes](https://github.com/Geraldomendes)
 
-... 
+--- 
 
 ### Organização de diretórios
 
